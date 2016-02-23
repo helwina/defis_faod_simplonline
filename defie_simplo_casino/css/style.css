@@ -1,0 +1,127 @@
+/*---------------*\
+    style de base
+\*---------------*/
+
+body {
+    color: white;
+    font-family: Open sans;
+    margin: 0;
+    background: #413838;
+}
+
+h2, .argentBank, .argent{
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-size: 25px;
+}
+
+h2 {
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+/*---------------*\
+    content
+\*---------------*/
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../image/P1290191.jpg) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+}
+
+.argent, .argentBank{
+    font-size: 30px;;
+}
+
+.argent {
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 55px;
+    color: black;
+}
+
+button, .pairimpaire, .choisirchiffre{
+    position: absolute;
+    top: 50%;
+}
+
+button {
+    height: 10%;
+    width: 10%;
+    margin-left: 45%;
+    border-radius: 15px;
+    box-shadow: 8px 8px 12px #000;
+    transition-duration: 0.6s;
+}
+
+button:hover {
+    background-color: #9a8a8a;
+    transition-duration: 0.6s;
+}
+
+.pairimpaire {
+    left: 15%;
+}
+
+.choisirchiffre {
+    right: 12%;
+}
+
+input {
+    position: absolute;
+    bottom: 20%;
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+}
+
+.choisirchiffre select {
+    position: absolute;
+    right: 40%;
+}
+
+.pairimpaire select{
+    position: absolute;
+    left: 33%;
+}
+
+/*---------------*\
+      petit
+      ecran
+\*---------------*/
+
+@media screen and (max-width: 750px){
+    p {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    .pairimpaire, .choisirchiffre {
+        top: 25%;
+        margin: 10px;
+    }
+
+    .pairimpaire {
+        left:0;
+    }
+
+    .choisirchiffre {
+        right: 0;
+    }
+
+    button{
+        height: 20%;
+        width: 20%;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+}
