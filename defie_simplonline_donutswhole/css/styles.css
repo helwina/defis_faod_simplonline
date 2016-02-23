@@ -1,0 +1,240 @@
+/* ===============================
+   Colour Palette:
+   ---------------
+   Light Cream:	#f2f3ee
+   Orange:			#d17f38
+   Yellow:			#e8c04f
+   Brown:			#4b2707
+   =============================== */
+
+/* General */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: open-sans;
+    text-rendering: optimizelegibility;
+    background-color: #f2f3ee;
+    color: #4b2707;
+}
+
+.container {
+    margin: auto;
+    width: 990px;
+
+}
+
+/* Typography */
+
+h1, h2 {
+    font-family: Love Ya Like A Sister;
+    color: #d17f38;
+}
+
+h1 {
+    line-height: 75px;
+    text-align: center;
+    background: url(../images/header-divider.png)no-repeat center;
+    background-position: bottom;
+}
+
+h1 em {
+    font-style: normal;
+    color: #4b2707;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+p.lead {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a:link, a:visited {
+    color: #d17f38;
+}
+
+a:hover {
+    color: #4b2707;
+}
+
+hr {
+    padding:20px 0 20px 0;
+    height: 30px;
+    border: 0;
+    background: url(../images/divider.png)no-repeat center;
+
+}
+
+/* Header */
+
+header nav {
+    height: 150px;
+}
+
+header nav ul {
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    text-transform: uppercase;
+    list-style-type: none;
+
+}
+
+header nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color:#d17f38;
+}
+
+header nav ul li a:hover {
+    padding-top: 45px;
+    background: url(../images/tiny-donut.png)no-repeat center;
+    color: #4b2707;
+}
+
+header nav ul li#logo a {
+    padding: 80px 100px 80px 100px;
+    background: url(../images/logo.png)no-repeat center;
+    color: transparent;
+}
+
+header nav ul li#logo a:hover {
+    background: url(../images/logo-hover.png)no-repeat center;
+}
+
+/* Hero */
+
+#hero {
+    margin-top: 30px;
+    background-color: #e8c04f;
+}
+
+#hero .container {
+    position: relative;
+    padding-top: 30px;
+}
+
+#hero .large-ribbon {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    height: 190px;
+    background: url(../images/fresh-whole-ingredients.png)no-repeat center;
+    color: transparent;
+}
+
+/* The Whole Story */
+
+#story-excerpt {
+    float: left;
+    width: 460px;
+}
+
+#best-donut {
+    padding:30px 45px 0 200px;
+    height: 95px;
+    width: 270px;
+    float: right;
+    text-align: left;
+    background: url(../images/award.png)no-repeat;
+    background-position: left;
+    background-size: 29%
+}
+
+/* News & Events */
+
+#articles {
+
+    width: 380px;
+    float: left;
+}
+
+#feature-image {
+    padding-right: 60px;
+    width: 540px;
+    float: right;
+}
+
+#news-events article {
+    padding-left: 60px;
+}
+
+#news-events article.news {
+    background: url(../images/icon-news.png)no-repeat;
+}
+
+#news-events article.event {
+    background: url(../images/icon-calendar.png)no-repeat;
+}
+
+#news-events header time {
+    color: #d17f38;
+}
+
+#news-events section.excerpt {
+    padding:20px 0 20px 0;
+}
+
+#news-events footer {
+    padding-bottom: 20px;
+}
+
+/* Footer */
+
+footer.main {
+    height: 150px;
+    background-color:#4b2707;
+}
+
+footer.main a:hover {
+    text-decoration: none;
+}
+
+#uncopyright, #credits {
+    padding:0 15px 15px 50px;
+    margin-top: 60px;
+    color: white;
+}
+
+#uncopyright {
+    width: 400px;
+    float: left;
+    background: url(../images/icon-recycle.png)no-repeat;
+}
+
+#credits {
+    padding-right: 65px;
+    width: 220px;
+    float: right;
+    background: url(../images/icon-apple.png)no-repeat;
+}
+
+/* Force Elements to Self Clear its Children: http://css-tricks.com/snippets/css/clear-fix/ */
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	}
+
+* html .group             { zoom: 1; } /* IE6 */
+
+*:first-child+html .group { zoom: 1; } /* IE7 */
