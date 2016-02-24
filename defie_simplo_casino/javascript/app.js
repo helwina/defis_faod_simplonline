@@ -40,6 +40,7 @@ function loose(){
     total = total - somme;
     totalbank = totalbank + (somme *1);
     enbank();
+    gameover();
 }
 
 //actualisation de l argent quand la roulette tombe susr le nombre qu on a choisis
@@ -47,6 +48,7 @@ function win(){
     total = total + (somme * 36);
     totalbank = totalbank - (somme * 36);
     enbank();
+    gameover();
 }
 
 //actualisation de l argent quand on a bien choisis paire ou impaire
@@ -54,6 +56,7 @@ function littlewin(){
     total = total + (somme * 2);
     totalbank = totalbank - (somme * 2 );
     enbank();
+    gameover();
 }
 
 //message gagner perdu en cas de bankroute
@@ -79,15 +82,12 @@ function resultat(){
     if((roulette != $nvaleur) && ((roulette % 2) != $valeur) || (roulette === 0)){
         $displayresult.innerHTML = "vous avez perdu";
         loose();
-        gameover();
     }else if(roulette == $nvaleur){
         $displayresult.innerHTML = "vous avez gagner 36 fois votre mise";
         win();
-        gameover();
     }else{
         $displayresult.innerHTML = "vous avez gagner 2 fois votre mise";
         littlewin();
-        gameover();
     }
 }
 
