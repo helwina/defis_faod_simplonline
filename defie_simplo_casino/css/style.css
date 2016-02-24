@@ -1,150 +1,112 @@
-/*--------------------------------*\
-        style de base
-\*--------------------------------*/
-
-body {
-    color: white;
-    font-family: Open sans;
+* {
     margin: 0;
-    background: #413838;
-}
-
-h1, .argentBank, .argent {
-    text-align: center;
+    padding: 0;
 }
 
 h1 {
-    margin-top: 20px;
+    margin-top:25px;
+
+    color: #fff;
+    text-align: center;
     text-transform: uppercase;
 }
 
-/*--------------------------------*\
-            content
-\*--------------------------------*/
+body {
+    background: url(../image/P1290191.jpg) no-repeat;
+    -webkit-background-size:cover;
+    background-size: cover;
+}
 
 .content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(../image/P1290191.jpg) no-repeat;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
-
-}
-
-.argent, .argentBank{
-    font-size: 30px;
-}
-
-.argent {
-    position:absolute;
-    left: 0;
-    right: 0;
-    bottom: 55px;
-    color: black;
+    margin:auto;
+    width:70%;
 }
 
 .result {
-    height: 100px;
-    margin: 25px auto;
-    width: 400px;
+    height: 250px;
+    width: 250px;
+    margin: 75px auto;
+    position: relative;
 
-    border-radius: 15px;
-
-    background-color: #fff;
-    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
 }
 
-.displayroulette, .displayresult {
-    color: black;
+.displayroulette{
+    position: absolute;
+    top: 30%;
+    right: 0;
+    left: 0;
+    text-align: center;
+
+    font-size: 85px;
+    font-weight: bold;
+}
+
+.displayresult {
+    position: absolute;
+    bottom: 10px;
+    right:30%;
+    left: 30%;
     text-align: center;
 }
+.choice {
+    position: relative;
+    height: 140px;
+    width: 100%;
 
-.displayroulette {
-    font-size: 45px;
-}
-
-button, .pairimpaire, .choisirchiffre{
-    position: absolute;
-    top: 50%;
-}
-
-button {
-    height: 10%;
-    width: 8%;
-    margin-left: 45%;
-    border-radius: 15px;
-    box-shadow: 8px 8px 12px #000;
-    transition-duration: 0.6s;
-}
-
-button:hover {
-    background-color: #9a8a8a;
-    transition-duration: 0.6s;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .pairimpaire {
-    left: 15%;
+    position: absolute;
+    left:10%;
+    top: 40px;
 }
 
 .choisirchiffre {
-    right: 12%;
+    position: absolute;
+    right: 10%;
+    top: 40px;
+}
+
+select {
+    height:45px;
+    width: 150px;
+}
+
+button {
+    position: absolute;
+    top: 40px;
+    right: 40%;
+    height:45px;
+    width:20%;
+    border-radius: 10px;
 }
 
 input {
-    position: absolute;
-    bottom: 20%;
-    width: 20%;
-    margin-left: 40%;
+    width: 100%;
+    height:35px;
     text-align: center;
 }
 
-.choisirchiffre select {
-    position: absolute;
-    right: 40%;
+.argentBank {
+   right: 10%;
 }
 
-.pairimpaire select{
-    position: absolute;
-    left: 33%;
+.argent {
+    left: 10%;
 }
 
-/*--------------------------------*\
-            petit ecran
-\*--------------------------------*/
+.argent, .argentBank {
+    position: absolute;
+    bottom: 10px;
+}
 
-@media screen and (max-width: 750px){
-    p {
-        font-size: 22px;
-        text-transform: uppercase;
+@media screen and (max-width:900px) {
+    button {
+        top:-50px;
     }
-
-    .pairimpaire, .choisirchiffre {
-        top: 25%;
-        margin: 10px;
-    }
-
-    .pairimpaire {
-        left:0;
-    }
-
-    .choisirchiffre {
-        right: 0;
-    }
-
-    button{
-        height: 14%;
-        width: 14%;
-        margin-left: 43%;
-        margin-right: 43%;
-    }
-
-    .result {
-        height: 110px;
-        margin: 25px auto;
-        width: 200px;
-
-        background-color: #fff;
-    }
-
 }

@@ -71,8 +71,8 @@ function gameover(){
 
 //affiche notre total d argent sur la page html
 function enbank(){
-    $argent.innerHTML = "vous avez " + total + " beta brouzouf";
-    $argentBank.innerHTML = "la bank a " + totalbank + " beta brouzouf";
+    $argent.innerHTML = "vous avez " + total;
+    $argentBank.innerHTML = "la bank a " + totalbank;
 }
 
 //pour savoir si on gagne ou on pert
