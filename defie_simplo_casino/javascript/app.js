@@ -1,33 +1,33 @@
-var select, choix, valeur, nselect, nchoix, bouton, nvaleur, roulette, somme,argent, total, argentBank, totalbank;
+/*-------------------------------------------------------*\
+                    variables
+\*-------------------------------------------------------*/
+$argent = document.getElementById("argent");
+$argentBank = document.getElementById("argentBank");
+$bouton = document.getElementById("bouton");
+$displayresult = document.getElementById("displayresult");
+$displayroulette = document.getElementById("displayroulette");
+$nselect = document.getElementById("SelctedNumber");
+$select = document.getElementById("PairImpair");
 
-//notre somme d argent de depart
 total = 100;
-
-//argent de depart de la bank
 totalbank = 100000;
 
-argent = document.getElementById("argent");
-argentBank = document.getElementById("argentBank");
-bouton = document.getElementById("bouton");
-
-//retien notre selection paire ou impaire
+//selection paire impaire
 function selitem(){
-    select = document.getElementById("PairImpair");
-    choix = select.selectedIndex;
-    valeur = select.options[choix].value;
+    $choix = $select.selectedIndex;
+    $valeur = $select.options[$choix].value;
 }
 
-//retiens notre selection du chiffre sur lequel miser
+//selection du chiffre sur lequel miser
 function selnumber(){
-    nselect = document.getElementById("SelctedNumber");
-    nchoix = nselect.selectedIndex;
-    nvaleur = nselect.options[nchoix].value;
+    $nchoix = $nselect.selectedIndex;
+    $nvaleur = $nselect.options[$nchoix].value;
 }
 
-//selection aleatoire d un nombre entre 0 et 36
+//selection d un nombre entre 0 et 36
 function nombreroulette(){
-    roulette = Math.floor(Math.random() * (36 - 0 +1)) + 0;
-    alert(roulette);
+    roulette = Math.floor(Math.random() * 37);
+    $displayroulette.innerHTML = roulette
 }
 
 //recupere la somme a miser dans le input
@@ -64,39 +64,42 @@ function gameover(){
     enbank();
     danslabank();
     if(total <= 0){
-        alert("vous avez perdu f5 pour rejouer");
+        $displayresult.innerHTML = "vous avez perdu f5 pour rejouer"
     }else if (totalbank <= 0){
-        alert("vous avez gagner bravo f5 pour rejouer ");
+        $displayresult.innerHTML = "bravo vous avez gagner f5 pour rejouer"
     }
 }
 
 //affiche notre total d argent sur la page html
 function enbank(){
-    argent.innerHTML = "vous avez " + total + " beta brouzouf";
+    $argent.innerHTML = "vous avez " + total + " beta brouzouf";
 }
 
 //affiche l argent de la bank sur la page html
 function danslabank(){
-    argentBank.innerHTML = "la bank a " + totalbank + " beta brouzouf";
+    $argentBank.innerHTML = "la bank a " + totalbank + " beta brouzouf";
 }
 
 //pour savoir si on gagne ou on pert
 function resultat(){
     nombreroulette();
     amiser();
-    if((((roulette != nvaleur)) && ((roulette % 2) != valeur)) || (roulette === 0)){
-        alert("Vous avez perdu");
-        return loose(), gameover();
-    }else if(((roulette == nvaleur))){
-        alert("Vous avez gagner");
-        return win(),gameover();
+    if((roulette != $nvaleur) && ((roulette % 2) != $valeur) || (roulette === 0)){
+        $displayresult.innerHTML = "vous avez perdu";
+        loose();
+        gameover();
+    }else if(roulette == $nvaleur){
+        $displayresult.innerHTML = "vous avez gagner 36 fois votre mise";
+        win();
+        gameover();
     }else{
-        alert("Vous avez gagner");
-        return littlewin(),gameover();
+        $displayresult.innerHTML = "vous avez gagner 2 fois votre mise";
+        littlewin();
+        gameover();
     }
 }
 
-bouton.onclick = resultat;//lance la function resultat au clic sur le bouton
+$bouton.onclick = resultat;
 enbank();
 amiser();
 danslabank();
