@@ -40,7 +40,6 @@ function loose(){
     total = total - somme;
     totalbank = totalbank + (somme *1);
     enbank();
-    danslabank();
 }
 
 //actualisation de l argent quand la roulette tombe susr le nombre qu on a choisis
@@ -48,7 +47,6 @@ function win(){
     total = total + (somme * 36);
     totalbank = totalbank - (somme * 36);
     enbank();
-    danslabank();
 }
 
 //actualisation de l argent quand on a bien choisis paire ou impaire
@@ -56,13 +54,11 @@ function littlewin(){
     total = total + (somme * 2);
     totalbank = totalbank - (somme * 2 );
     enbank();
-    danslabank();
 }
 
 //message gagner perdu en cas de bankroute
 function gameover(){
     enbank();
-    danslabank();
     if(total <= 0){
         $displayresult.innerHTML = "vous avez perdu f5 pour rejouer"
     }else if (totalbank <= 0){
@@ -73,10 +69,6 @@ function gameover(){
 //affiche notre total d argent sur la page html
 function enbank(){
     $argent.innerHTML = "vous avez " + total + " beta brouzouf";
-}
-
-//affiche l argent de la bank sur la page html
-function danslabank(){
     $argentBank.innerHTML = "la bank a " + totalbank + " beta brouzouf";
 }
 
@@ -100,6 +92,5 @@ function resultat(){
 }
 
 $bouton.onclick = resultat;
-enbank();
 amiser();
-danslabank();
+enbank();
