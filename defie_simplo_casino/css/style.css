@@ -1,3 +1,7 @@
+/*-----------------------------------------------------*\
+                     base
+\*-----------------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -18,95 +22,90 @@ body {
 }
 
 .content {
-    margin:auto;
-    width:70%;
+    margin: auto;
 }
+
+/*-----------------------------------------------------*\
+                    placement des block
+\*-----------------------------------------------------*/
 
 .result {
-    height: 250px;
-    width: 250px;
+    height: 150px;
+    width: 150px;
     margin: 75px auto;
-    position: relative;
 
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    border-radius: 50%;
+
+    background-color: #fff;
+
+    text-align: center;
 }
 
-.displayroulette{
-    position: absolute;
-    top: 30%;
-    right: 0;
-    left: 0;
-    text-align: center;
-
-    font-size: 85px;
-    font-weight: bold;
+.displayroulette {
+    line-height:150px;
+    font-size:75px;
 }
 
 .displayresult {
-    position: absolute;
-    bottom: 10px;
-    right:30%;
-    left: 30%;
-    text-align: center;
-}
-.choice {
-    position: relative;
-    height: 140px;
-    width: 100%;
+    height: 25px;
+    width: 50%;
+    margin: auto;
 
-    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size:22px;
 }
 
 .pairimpaire {
-    position: absolute;
-    left:10%;
-    top: 40px;
+    float: left;
 }
 
 .choisirchiffre {
-    position: absolute;
-    right: 10%;
-    top: 40px;
+    float: right;
 }
 
 select {
-    height:45px;
-    width: 150px;
+    height: 30px;
+    width: 180px;
+    margin: 10px;
 }
 
-button {
-    position: absolute;
-    top: 40px;
-    right: 40%;
-    height:45px;
-    width:20%;
-    border-radius: 10px;
+.bouton {
+    width: 20%;
+    height: 45px;
+    margin: 10px 40%;
+
+    border-radius: 7px;
 }
 
 input {
-    width: 100%;
-    height:35px;
+    margin:20px 5%;
+    height:25px;
+    width: 90%;
+}
+
+.argentBank, .argent {
+    margin: auto;
+    padding: 10px;
+
     text-align: center;
 }
 
-.argentBank {
-   right: 10%;
+.font {
+    background-color: #fff;
+    opacity: 0.8;
+}
+/*-----------------------------------------------------*\
+                    mediaquery
+\*-----------------------------------------------------*/
+@media screen and (min-width: 940px){
+    .content {
+        width: 80%;
+    }
+
 }
 
-.argent {
-    left: 10%;
-}
-
-.argent, .argentBank {
-    position: absolute;
-    bottom: 10px;
-}
-
-@media screen and (max-width:900px) {
-    button {
-        top:-50px;
+@media screen and (min-width: 1140px){
+    .content {
+        width: 60%;
     }
 }

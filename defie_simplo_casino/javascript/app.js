@@ -83,10 +83,10 @@ function resultat(){
         $displayresult.innerHTML = "vous avez perdu";
         loose();
     }else if(roulette == $nvaleur){
-        $displayresult.innerHTML = "vous avez gagner 36 fois votre mise";
+        $displayresult.innerHTML = "vous avez gagner";
         win();
     }else{
-        $displayresult.innerHTML = "vous avez gagner 2 fois votre mise";
+        $displayresult.innerHTML = "vous avez gagner";
         littlewin();
     }
 }
