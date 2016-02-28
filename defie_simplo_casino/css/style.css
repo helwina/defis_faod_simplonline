@@ -23,6 +23,7 @@ body {
 
 .content {
     margin: auto;
+    opacity:1;
 }
 
 /*-----------------------------------------------------*\
@@ -36,7 +37,7 @@ body {
 
     border-radius: 50%;
 
-    background-color: #fff;
+    background-color: #f4ff53;
 
     text-align: center;
 }
@@ -53,6 +54,7 @@ body {
 
     text-align: center;
     font-size:22px;
+    opacity:1;
 }
 
 .pairimpaire {
@@ -73,6 +75,7 @@ select {
     width: 20%;
     height: 45px;
     margin: 10px 40%;
+    opacity:;
 
     border-radius: 7px;
 }
@@ -81,6 +84,7 @@ input {
     margin:20px 5%;
     height:25px;
     width: 90%;
+
 }
 
 .argentBank, .argent {
@@ -91,8 +95,7 @@ input {
 }
 
 .font {
-    background-color: #fff;
-    opacity: 0.8;
+    background: rgba(255, 190, 188, 0.8);
 }
 /*-----------------------------------------------------*\
                     mediaquery
