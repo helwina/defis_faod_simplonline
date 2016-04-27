@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Immatriculation:</strong>
+  <%= @voiture.immatriculation %>
+</p>
+
+<p>
+  <strong>Couleur:</strong>
+  <%= @voiture.couleur %>
+</p>
+
+<p>
+  <strong>Marque:</strong>
+  <%= @voiture.marque %>
+</p>
+
+<p>
+  <strong>Modele:</strong>
+  <%= @voiture.modele %>
+</p>
+
+<p>
+  <strong>Date mise en service:</strong>
+  <%= @voiture.date_mise_en_service %>
+</p>
+
+<%= link_to 'Edit', edit_voiture_path(@voiture) %> |
+<%= link_to 'Back', voitures_path %>

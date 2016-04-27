@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  immatriculation: MyString
+  couleur: MyString
+  marque: MyString
+  modele: MyString
+  date_mise_en_service: 2015-11-29
+
+two:
+  immatriculation: MyString
+  couleur: MyString
+  marque: MyString
+  modele: MyString
+  date_mise_en_service: 2015-11-29

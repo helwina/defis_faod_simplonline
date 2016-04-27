@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Personnes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prenomb</th>
+      <th>Date de naissance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personnes.each do |personne| %>
+      <tr>
+        <td><%= personne.nom %></td>
+        <td><%= personne.prenomb %></td>
+        <td><%= personne.date_de_naissance %></td>
+        <td><%= link_to 'Show', personne %></td>
+        <td><%= link_to 'Edit', edit_personne_path(personne) %></td>
+        <td><%= link_to 'Destroy', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Personne', new_personne_path %>
+<p><%= link_to('aller au listing des voitures', {:controller => 'voitures', :action => 'index'})%></p>
