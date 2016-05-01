@@ -4,7 +4,7 @@ class BooksController < ApplicationController
     end
     
     def create
-        Book.create title: params[:title]   
+        Book.create title: params[:title]
         redirect_to '/books'
     end
     
@@ -14,13 +14,11 @@ class BooksController < ApplicationController
     
     def update
         Book.find_by_id(params[:id]).update title: params[:title]
-        redirect_to '/books/params[:id]'
+        redirect_to "/books/#{params[:id]}"
     end
     
-    def destroy  
+    def destroy
         Book.find_by_id(params[:id]).destroy
         redirect_to '/books'
     end
-
-
 end

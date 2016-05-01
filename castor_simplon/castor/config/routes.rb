@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root 'pages#home'
     get 'contact'          => 'pages#contact'
     get 'a_propos'         => 'pages#a_propos'
-    get 'books'            =>'books#index'
+    get 'books'            => 'books#index'
     get 'books/:id'        => 'books#show'
     post 'books'           => 'books#create'
     patch 'books/:id'      => 'books#update'
