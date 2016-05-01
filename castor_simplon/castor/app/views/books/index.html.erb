@@ -8,6 +8,6 @@
   <input type="submit" value="Ajouter le livre" />
 <% end %>
 
-<p><%= link_to('page 1', {:controller => 'pages', :action => 'home'})%></p>
-<p><%= link_to('page 2', {:controller => 'pages', :action => 'contact'})%></p>
-<p><%= link_to('page 3', {:controller => 'pages', :action => 'a_propos'})%></p>
+<p><%= link_to'page 1', root_path %></p>
+<p><%= link_to'page 2', contact_path %></p>
+<p><%= link_to'page 3', a_propos_path %></p>

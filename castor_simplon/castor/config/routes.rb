@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
     
     root 'pages#home'
-    get 'contact' => 'pages#contact'
-    get 'a_propos' => 'pages#a_propos'
-    get 'books'   =>'books#index'
+    get 'contact'          => 'pages#contact'
+    get 'a_propos'         => 'pages#a_propos'
+    get 'books'            =>'books#index'
+    get 'books/:id'        => 'books#show'
+    post 'books'           => 'books#create'
+    patch 'books/:id'      => 'books#update'
+    delete 'books/:id'     => 'books#destroy'
 
-    post 'books' => 'books#create'
-    patch 'books/:id' => 'books#update'
-    delete 'books/:id' => 'books#destroy'
-    get 'books/:id' => 'books#show'
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
