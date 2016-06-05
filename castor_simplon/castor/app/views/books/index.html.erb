@@ -1,13 +1,14 @@
 <h1>Liste des livres</h1>
-<% @books.each do |book| %>
-  <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
-<% end %>
+  <% @books.each do |book| %>
+    <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
+  <% end %>
 
-<%= form_tag '/books', method: 'post' do %>
-  <input type="text" name="title" />
-  <input type="submit" value="Ajouter le livre" />
-<% end %>
+  <%= form_tag '/books', method: 'post' do %>
+    <input type="text" name="title" />
+    <input type="submit" value="Ajouter le livre" />
+  <% end %>
 
 <p><%= link_to'page 1', root_path %></p>
 <p><%= link_to'page 2', contact_path %></p>
 <p><%= link_to'page 3', a_propos_path %></p>
+<p><%= link_to('liste des livres', books_path)%></p>
